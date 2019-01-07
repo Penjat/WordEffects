@@ -16,6 +16,7 @@ int main(int argc, const char * argv[]) {
             // 255 unit long array of characters
             char inputChars[255];
             
+            
             printf("Input a string: ");
             // limit input to max 255 characters
             fgets(inputChars, 255, stdin);
@@ -28,6 +29,58 @@ int main(int argc, const char * argv[]) {
             
             // print NSString object
             NSLog(@"Input was: %@", inputString);
+            
+            printf("Input your number between 1 and 6: ");
+            fgets(inputChars, 255, stdin);
+            
+            NSString *inputNumber = [NSString stringWithUTF8String:inputChars];
+            NSNumber *modValue = @([inputNumber integerValue]);
+            
+            //if([modValue  isEqual: @1]){
+            if([inputNumber isEqualToString:@"1\n"]){
+                printf("it was 1\n");
+                NSLog(@"%@", [inputString uppercaseString]);
+                
+            }else if([inputNumber isEqualToString:@"2\n"]){
+                printf("it was 2\n");
+                NSLog(@"%@", [inputString lowercaseString]);
+                
+            }else if([inputNumber isEqualToString:@"3\n"]){
+                printf("it was 3\n");
+                NSNumber *nsintFromString = @([inputString integerValue]);
+                NSLog(@"%@", nsintFromString);
+                
+            }else if([inputNumber isEqualToString:@"4\n"]){
+                printf("it was 4\n");
+                
+                NSLog(@"%@", [inputString stringByAppendingString:@", eh?"]);
+                
+            }
+            else if([inputNumber isEqualToString:@"5\n"]){
+                printf("it was 5\n");
+                
+                //Check for ?
+                //is not checking end, only checks if there is one
+                
+                if([inputString containsString:@"?"]){
+                    NSLog(@"%@",@"I don't know.");
+                    
+                    
+                //Check for !
+                }else if([inputString containsString:@"!"]){
+                    NSLog(@"%@",@"Whoa, calm down!");
+                }
+                
+                
+            }else if([inputNumber isEqualToString:@"6\n"]){
+                printf("it was 6\n");
+                
+                NSLog(@"%@", [inputString stringByReplacingOccurrencesOfString:@" " withString:@""]);
+                
+            }else{
+                return 0;
+            }
+            
         }
     }
     return 0;
