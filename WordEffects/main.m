@@ -30,7 +30,7 @@ int main(int argc, const char * argv[]) {
             // print NSString object
             NSLog(@"Input was: %@", inputString);
             
-            printf("Input your number between 1 and 6: ");
+            printf("Input a number to modify your text");
             fgets(inputChars, 255, stdin);
             
             NSString *inputNumber = [NSString stringWithUTF8String:inputChars];
@@ -78,6 +78,13 @@ int main(int argc, const char * argv[]) {
                 printf("it was 6\n");
                 
                 NSLog(@"%@", [inputString stringByReplacingOccurrencesOfString:@" " withString:@""]);
+                
+            }
+            else if([inputNumber isEqualToString:@"7\n"]){
+                //letter count
+                printf("it was 7\n");
+                
+                NSLog(@"the letter count is %lu", [inputString length]-1);
                 
             }else{
                 return 0;
