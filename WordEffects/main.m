@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TextTransform.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -94,6 +95,18 @@ int main(int argc, const char * argv[]) {
                 inputString = [inputString stringByReplacingOccurrencesOfString:@"," withString:@""];
                 
                 NSLog(@"%@", inputString);
+                
+            }else if([modValue isEqual:@9]){
+                
+                NSLog(@"%@",[TextTransform TransformToEmoji:inputString]);
+                
+                
+                
+            }else if([modValue isEqual:@10]){
+                
+                
+                
+                
                 
             }else{
                 return 0;

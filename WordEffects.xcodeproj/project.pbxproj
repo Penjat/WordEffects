@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B1B914D021E4024700D65692 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B914CF21E4024700D65692 /* main.m */; };
+		B1B914D821E4374000D65692 /* TextTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B914D721E4374000D65692 /* TextTransform.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		B1B914CC21E4024700D65692 /* WordEffects */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WordEffects; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B914CF21E4024700D65692 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B1B914D621E4374000D65692 /* TextTransform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextTransform.h; sourceTree = "<group>"; };
+		B1B914D721E4374000D65692 /* TextTransform.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextTransform.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				B1B914CF21E4024700D65692 /* main.m */,
+				B1B914D621E4374000D65692 /* TextTransform.h */,
+				B1B914D721E4374000D65692 /* TextTransform.m */,
 			);
 			path = WordEffects;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1B914D021E4024700D65692 /* main.m in Sources */,
+				B1B914D821E4374000D65692 /* TextTransform.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
