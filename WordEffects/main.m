@@ -31,14 +31,18 @@ int main(int argc, const char * argv[]) {
             // print NSString object
             NSLog(@"Input was: %@", inputString);
             
-            printf("Input a number to modify your text");
+            printf("Input a number (1-9) to transform your text\n");
+            printf("type 0 to see the transformation options\n");
             fgets(inputChars, 255, stdin);
             
             NSString *inputNumber = [NSString stringWithUTF8String:inputChars];
             NSNumber *modValue = @([inputNumber integerValue]);
             
             //if([modValue  isEqual: @1]){
-            if([modValue isEqual:@1]){
+            if([modValue isEqual:@0]){
+                printf(" 1 to uppercase \n 2 to lowercase \n 3 to number \n 4 to Canadian \n 5 Get some feedback \n 6 remove spaces \n 7 character count \n zero punctuation \n 9 to random emoji \n ");
+                //will have to input your string again but oh well
+            }else if([modValue isEqual:@1]){
                 
                 NSLog(@"%@", [inputString uppercaseString]);
                 
