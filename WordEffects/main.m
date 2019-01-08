@@ -53,12 +53,26 @@ int main(int argc, const char * argv[]) {
             }else if([modValue isEqual:@3]){
                 
                 NSNumber *nsintFromString = @([inputString integerValue]);
-                NSLog(@"%@", nsintFromString);
+                
+                NSString *testString = [NSString stringWithFormat:@"%li",(long)[nsintFromString integerValue]];
+                inputString = [inputString stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+                
+                if([testString isEqualTo:inputString]){
+                    NSLog(@"the conversion was sucsessful" );
+                    NSLog(@"%@", nsintFromString);
+                }else{
+                    NSLog(@"Not a valid number." );
+                    NSLog(@"%@ %@",testString,inputString);
+                }
+                
+                
                 
             }else if([modValue isEqual:@4]){
                 
+                inputString = [inputString stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+                inputString = [inputString stringByAppendingString:@", eh?"];
+                NSLog(@"%@", inputString);
                 
-                NSLog(@"%@", [inputString stringByAppendingString:@", eh?"]);
                 
             }
             else if([modValue isEqual:@5]){
