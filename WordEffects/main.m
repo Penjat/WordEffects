@@ -37,27 +37,27 @@ int main(int argc, const char * argv[]) {
             NSNumber *modValue = @([inputNumber integerValue]);
             
             //if([modValue  isEqual: @1]){
-            if([inputNumber isEqualToString:@"1\n"]){
-                printf("it was 1\n");
+            if([modValue isEqual:@1]){
+                
                 NSLog(@"%@", [inputString uppercaseString]);
                 
-            }else if([inputNumber isEqualToString:@"2\n"]){
-                printf("it was 2\n");
+            }else if([modValue isEqual:@2]){
+                
                 NSLog(@"%@", [inputString lowercaseString]);
                 
-            }else if([inputNumber isEqualToString:@"3\n"]){
-                printf("it was 3\n");
+            }else if([modValue isEqual:@3]){
+                
                 NSNumber *nsintFromString = @([inputString integerValue]);
                 NSLog(@"%@", nsintFromString);
                 
-            }else if([inputNumber isEqualToString:@"4\n"]){
-                printf("it was 4\n");
+            }else if([modValue isEqual:@4]){
+                
                 
                 NSLog(@"%@", [inputString stringByAppendingString:@", eh?"]);
                 
             }
-            else if([inputNumber isEqualToString:@"5\n"]){
-                printf("it was 5\n");
+            else if([modValue isEqual:@5]){
+                
                 //TODO will crash if length is 0
                 NSString *lastChar = [inputString substringFromIndex:([inputString length] - 2)];
                 NSLog(@"last char = %@",lastChar);
@@ -74,17 +74,26 @@ int main(int argc, const char * argv[]) {
                 }
                 
                 
-            }else if([inputNumber isEqualToString:@"6\n"]){
-                printf("it was 6\n");
+            }else if([modValue isEqual:@6]){
+                
                 
                 NSLog(@"%@", [inputString stringByReplacingOccurrencesOfString:@" " withString:@""]);
                 
             }
-            else if([inputNumber isEqualToString:@"7\n"]){
+            else if([modValue isEqual:@7]){
                 //letter count
-                printf("it was 7\n");
+                
                 
                 NSLog(@"the letter count is %lu", [inputString length]-1);
+                
+            }else if([modValue isEqual:@8]){
+                
+                inputString = [inputString stringByReplacingOccurrencesOfString:@"." withString:@""];
+                inputString = [inputString stringByReplacingOccurrencesOfString:@"?" withString:@""];
+                inputString = [inputString stringByReplacingOccurrencesOfString:@"!" withString:@""];
+                inputString = [inputString stringByReplacingOccurrencesOfString:@"," withString:@""];
+                
+                NSLog(@"%@", inputString);
                 
             }else{
                 return 0;
