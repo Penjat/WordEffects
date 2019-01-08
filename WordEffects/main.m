@@ -58,16 +58,18 @@ int main(int argc, const char * argv[]) {
             }
             else if([inputNumber isEqualToString:@"5\n"]){
                 printf("it was 5\n");
-                
+                //TODO will crash if length is 0
+                NSString *lastChar = [inputString substringFromIndex:([inputString length] - 2)];
+                NSLog(@"last char = %@",lastChar);
                 //Check for ?
-                //is not checking end, only checks if there is one
                 
-                if([inputString containsString:@"?"]){
+                
+                if([lastChar containsString:@"?"]){
                     NSLog(@"%@",@"I don't know.");
                     
                     
                 //Check for !
-                }else if([inputString containsString:@"!"]){
+                }else if([lastChar containsString:@"!"]){
                     NSLog(@"%@",@"Whoa, calm down!");
                 }
                 
